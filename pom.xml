@@ -1,0 +1,98 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.sdl.oss</groupId>
+        <artifactId>oss-parent</artifactId>
+        <version>0.1.0</version>
+    </parent>
+
+    <groupId>com.sdl</groupId>
+    <artifactId>log-capture</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+    <name>Log Capture</name>
+
+    <description>Log Capture</description>
+    <url>https://github.com/sdl/log-capture</url>
+    <inceptionYear>2015</inceptionYear>
+
+    <organization>
+        <name>SDL</name>
+        <url>http://www.sdl.com/</url>
+    </organization>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <version.guava>18.0</version.guava>
+        <version.junit>4.12</version.junit>
+        <version.truth>0.26</version.truth>
+        <version.logback>1.0.13</version.logback>
+    </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.3</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>2.5</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${version.junit}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-core</artifactId>
+            <version>${version.logback}</version>
+        </dependency>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>${version.logback}</version>
+        </dependency>
+    </dependencies>
+
+    <scm>
+        <url>https://github.com/sdl/log-capture</url>
+        <connection>scm:git:https://github.com/sdl/log-capture.git</connection>
+        <developerConnection>scm:git:git@github.com:sdl/log-capture.git</developerConnection>
+        <tag>HEAD</tag>
+    </scm>
+
+    <licenses>
+        <license>
+            <name>Apache License 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.html</url>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <id>ihomer</id>
+            <name>Ian Homer</name>
+            <email>ihomer@sdl.com</email>
+        </developer>
+    </developers>
+
+</project>
